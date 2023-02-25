@@ -1,4 +1,4 @@
-# testcase_generator
+# Testcase Generator
 
 This is a C++ program for generating testcases for algorithmic problems. The program takes in constraints for each test case and generates corresponding input and output files.
 
