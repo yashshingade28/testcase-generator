@@ -14,7 +14,7 @@ void geninp(const int constraint[noofvars][2])
 
 void genout(const string& inp, const string& out)
 {
-  string cmd = "./a.out" ;
+  string cmd = "" ;
   cmd += " <" ;
   cmd += inp ;
   cmd += " 1>" ;
