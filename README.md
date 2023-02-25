@@ -17,12 +17,12 @@ git clone https://github.com/yashshingade28/testcase_generator.git
 To generate testcases, follow these steps:
 1) Open the generator.cpp file and set the values of `nooftests` and `noofvars` according to the number of test cases and variables you need for your problem.
 2) Set the constraints for each test case in the `constraint` array. The `constraint` array is a 3D array of integers, where the first dimension represents the test case number, the second dimension represents the variable number, and the third dimension represents the minimum and maximum values of the variable, respectively. For example, `constraint[i][j][0]` represents the minimum value of the jth variable for the ith test case, and `constraint[i][j][1]` represents the maximum value of the jth variable for the ith test case.
-3) Write your code in `geninp` function to generate the input depending on the input format of the problem.
-4) Initialize the `cmd` string in the `genout` function with the bash command to execute your solution for the problem.
+3) Write your code in `geninp()` function to generate the input depending on the input format of the problem.
+4) Initialize the `cmd` string in the `genout()` function with the bash command to execute your solution for the problem.
 5) Save the file and compile it using your C++ compiler.
 6) Run the compiled executable to generate the input and output files in the input and output folders respectively.
 
-The generated input files will be named inp0.txt, inp1.txt, and so on, while the output files will be named out0.txt, out1.txt, and so on. You can modify the naming convention by changing the `inp` & `out` strings in the main() function.
+The generated input files will be named inp0.txt, inp1.txt, and so on, while the output files will be named out0.txt, out1.txt, and so on. You can modify the naming convention by changing the `inp` & `out` strings in the `main()` function.
 
 ### Example
 You can check out the example folder for an example on how to use the generator, it contains testcase generation for a sample problem.
