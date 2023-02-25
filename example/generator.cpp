@@ -4,18 +4,22 @@ using namespace std;
 std::mt19937_64 rng(std::chrono::steady_clock::now().time_since_epoch().count());
 int64_t randint(int64_t l, int64_t r) {return std::uniform_int_distribution<int64_t>(l, r)(rng);}
 
-constexpr int nooftests = 4;
-constexpr int noofvars = 1;
+constexpr int nooftests = 4; // no. of testcases we want to generate
+constexpr int noofvars = 1; // even though there are two variables but since their constraints are same we will tree it as one
 
 void geninp(const int constraint[noofvars][2])
 {
-  cout << randint(constraint[0][0] , constraint[0][1]) << " " ;
+  // printing two space separated integers in the input file
+  cout << randint(constraint[0][0] , constraint[0][1]) << " " ; 
   cout << randint(constraint[0][0] , constraint[0][1]) ;
 }
 
 void genout(const string& inp, const string& out)
 {
-  string cmd = "./a.out" ;
+  // since my solution is in cpp this is the command to run its executable
+  // note that you have to ensure that you've compiled your solution and the executable
+  // exists otherwise the generator will fail
+  string cmd = "./a.out" ; 
   cmd += " <" ;
   cmd += inp ;
   cmd += " 1>" ;
@@ -34,10 +38,10 @@ int main()
 
   int constraint[nooftests][noofvars][2] =
   {
-    {{1 , 10}},
-    {{10 , 100}},
-    {{100 , 1000}},
-    {{1000, 10000}}
+    {{1 , 10}}, // constraint for test 1
+    {{10 , 100}}, // constraint for test 2
+    {{100 , 1000}}, // constraint for test 3
+    {{1000, 10000}} // constraint for test 4
   };
 
   for (int i = 0 ; i < nooftests ; i++)
