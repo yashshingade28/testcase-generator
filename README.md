@@ -7,6 +7,7 @@ This is a C++ program for generating testcases for algorithmic problems. The pro
 To run this program, you'll need to have the following installed:
 - C++ compiler
 - git
+- CLI tools to execute your solution code
 
 ### Installation
 ```bash
