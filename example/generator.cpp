@@ -51,6 +51,8 @@ int main()
   for (int i = 0 ; i < nooftests ; i++)
   {
     string testnum = to_string(i) ;
+    
+    // You can change these strings to change the naming convention 
     string inp = "input/inp" + testnum + ".txt" ;
     string out = "output/out" + testnum + ".txt" ;
 
