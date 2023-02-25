@@ -1,3 +1,6 @@
+// This code generates tests for the following problem
+// Given two integers a and b output their sum
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -5,7 +8,7 @@ std::mt19937_64 rng(std::chrono::steady_clock::now().time_since_epoch().count())
 int64_t randint(int64_t l, int64_t r) {return std::uniform_int_distribution<int64_t>(l, r)(rng);}
 
 constexpr int nooftests = 4; // no. of testcases we want to generate
-constexpr int noofvars = 1; // even though there are two variables but since their constraints are same we will tree it as one
+constexpr int noofvars = 1; // even though there are two variables but since their constraints are same we will treat it as one
 
 void geninp(const int constraint[noofvars][2])
 {
@@ -16,9 +19,10 @@ void geninp(const int constraint[noofvars][2])
 
 void genout(const string& inp, const string& out)
 {
-  // since my solution is in cpp this is the command to run its executable
-  // note that you have to ensure that you've compiled your solution and the executable
-  // exists otherwise the generator will fail
+  // since my solution is in sol.cpp this is the command to run its executable
+  // note that you have to ensure that you've compiled your solution(if you have 
+  // your solution in a compiled language) and the executable exists otherwise 
+  // the generator will fail.
   string cmd = "./a.out" ; 
   cmd += " <" ;
   cmd += inp ;
